@@ -1,22 +1,18 @@
-# Cofide API SDK
+# cofidectl SDK
 
-[![Buf CI](https://github.com/cofide/cofide-api-sdk/workflows/buf-ci/badge.svg)](https://github.com/cofide/cofide-api-sdk/actions?query=workflow%3Abuf-ci+branch%3Amain)
+[![Buf CI](https://github.com/cofide/cofidectl-sdk/workflows/buf-ci/badge.svg)](https://github.com/cofide/cofidectl-sdk/actions?query=workflow%3Abuf-ci+branch%3Amain)
 
-This repository contains the service definitions and code generated stubs for [Cofide's](https://www.cofide.io/) APIs, used for open source projects (e.g. [`cofidectl`](https://github.com/cofide/cofidectl)) and the Cofide Connect product.
-Services and messages are defined using Protocol Buffers (protobuf).
-This repository also contains a Go client implementation for the Cofide Connect API.
+This repository contains the protobuf message type definitions and generated Go stubs for [`cofidectl`](https://github.com/cofide/cofidectl).
 
 For more information about the Cofide Connect Workload Identity platform, take a look at our [blog post](https://www.cofide.io/resources/introducing-cofide-connect-the-control-plane-for-workload-identity-and-access-management-iam) or [public documentation](https://docs.cofide.dev). If you'd like to discuss how enterprise workload identity management could benefit you then [let us know](https://www.cofide.io/contact).
 
 ## Prerequisites
 
-This repository uses the [Buf CLI](https://buf.build/docs/ecosystem/cli-overview) to help generate and manage Cofide's protobuf definitions and schemas.
+This repository uses the [Buf CLI](https://buf.build/docs/ecosystem/cli-overview) to generate Go stubs from protobuf definitions.
 The following tools must be available in order to generate code stubs.
 
-- [Go 1.22.6 toolchain](https://golang.org/doc/install)
-- [protobuf version 3 compiler](https://grpc.io/docs/protoc-installation/)
-- [Go gRPC and protobuf](https://grpc.io/docs/languages/go/quickstart/#prerequisites) build tools.
-- [Connect RPC tools](https://connectrpc.com/docs/go/getting-started#prerequisites)
+- [Go 1.25.11 toolchain](https://golang.org/doc/install)
+- [protoc-gen-go](https://pkg.go.dev/google.golang.org/protobuf/cmd/protoc-gen-go): `go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.36.5`
 - [Buf CLI](https://buf.build/docs/installation)
 - [Just](https://github.com/casey/just)
 
@@ -26,15 +22,12 @@ For convenience, a set of useful commands have been added to the *Justfile* in t
 Some of the key commands include:
 
 - `just fmt` - Formats the protobuf definitions
-- `just lint` - Lints the protobuf definitions and Go source code in accordance with best practices
-- `just proto-gen` - Generates the code stubs from the protobuf definitions using the defined plugins (specified in *buf.gen.yaml*)
-- `just proto-docs [out=<dir>]` - Generates Markdown API documentation from the protobuf definitions (defaults to `./docs/`); requires `protoc-gen-doc` (`go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest`)
-- `just test` - Runs Go unit tests
+- `just lint` - Lints the protobuf definitions and Go source code
+- `just proto-gen` - Generates Go stubs from the protobuf definitions
+- `just proto-docs [out=<dir>]` - Generates Markdown API documentation (defaults to `./docs/`); requires `protoc-gen-doc` (`go install github.com/pseudomuto/protoc-gen-doc/cmd/protoc-gen-doc@latest`)
 
-The `.proto` files are in the `proto` directory, and the generated stubs for Go are in the `gen/proto/go` directory.
-The Cofide Connect API client is in the `pkg/connect/client` directory.
+The `.proto` files are in the `proto/` directory. Generated Go stubs are in `gen/go/`.
 
 ## Stability
 
-The service definitions in this repository are not currently guaranteed to be backward compatible over time, and have been versioned as `v1alpha1` to indicate this.
-As Cofide projects and product mature, we will move to `v1` and guarantee backward compatibility from that point.
+The message definitions in this repository are not currently guaranteed to be backward compatible over time, and have been versioned as `v1alpha1`/`v1alpha2` to indicate this.

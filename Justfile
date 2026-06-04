@@ -50,12 +50,4 @@ proto-docs out="docs": ensure-protoc-gen-doc
     mkdir -p {{out}}
     buf generate --path ./proto --template buf.gen.docs.yaml --output {{out}}
 
-test *args:
-    go run gotest.tools/gotestsum@latest --format github-actions ./... {{args}}
-
-test-race: (test "--" "-race")
-
-go-lint *args:
-    golangci-lint run --show-stats {{args}}
-
-lint *args: buf-lint (go-lint args)
+lint *args: buf-lint

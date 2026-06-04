@@ -11,7 +11,7 @@ import "proto/cluster/v1alpha1/cluster.proto";
 import "proto/federation/v1alpha1/federation.proto";
 import "proto/trust_zone/v1alpha1/trust_zone.proto";
 
-option go_package = "github.com/cofide/cofide-api-sdk/gen/go/proto/cofidectl/datasource_plugin/v1alpha2";
+option go_package = "github.com/cofide/cofidectl-sdk/gen/go/proto/cofidectl/datasource_plugin/v1alpha2";
 
 service DataSourcePluginService {
   rpc Validate(ValidateRequest) returns (ValidateResponse);

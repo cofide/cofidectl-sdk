@@ -13,7 +13,7 @@ import "google/api/field_behavior.proto";
 import "google/protobuf/timestamp.proto";
 import "proto/spire/api/types/bundle.proto";
 
-option go_package = "github.com/cofide/cofide-api-sdk/gen/go/proto/trust_zone/v1alpha1";
+option go_package = "github.com/cofide/cofidectl-sdk/gen/go/proto/trust_zone/v1alpha1";
 
 // TrustZone represents one or more clusters and/or nodes within a
 // single trust boundary. Each trust zone is a SPIFFE trust domain: workload
