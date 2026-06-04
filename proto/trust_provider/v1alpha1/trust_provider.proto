@@ -7,7 +7,7 @@ package proto.trust_provider.v1alpha1;
 
 import "google/api/field_behavior.proto";
 
-option go_package = "github.com/cofide/cofide-api-sdk/gen/go/proto/trust_provider/v1alpha1";
+option go_package = "github.com/cofide/cofidectl-sdk/gen/go/proto/trust_provider/v1alpha1";
 
 message K8sPsatConfig {
   // Whether to enable the k8s psat node attestor plugin with a Connect datasource.

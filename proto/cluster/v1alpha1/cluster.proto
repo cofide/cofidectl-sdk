@@ -12,7 +12,7 @@ import "google/protobuf/struct.proto";
 import "google/protobuf/timestamp.proto";
 import "proto/trust_provider/v1alpha1/trust_provider.proto";
 
-option go_package = "github.com/cofide/cofide-api-sdk/gen/go/proto/cluster/v1alpha1";
+option go_package = "github.com/cofide/cofidectl-sdk/gen/go/proto/cluster/v1alpha1";
 
 // Cluster represents a single environment (e.g. a Kubernetes cluster) onboarded
 // onto Connect. Each cluster belongs to a trust zone.

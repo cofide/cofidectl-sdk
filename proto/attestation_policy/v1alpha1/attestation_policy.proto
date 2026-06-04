@@ -13,7 +13,7 @@ import "google/api/field_behavior.proto";
 import "google/protobuf/timestamp.proto";
 import "proto/spire/api/types/selector.proto";
 
-option go_package = "github.com/cofide/cofide-api-sdk/gen/go/proto/attestation_policy/v1alpha1";
+option go_package = "github.com/cofide/cofidectl-sdk/gen/go/proto/attestation_policy/v1alpha1";
 
 // AttestationPolicy defines criteria used to issue a SPIFFE identity to a
 // workload. Policies specify attributes of the workload that must be attested
