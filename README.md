@@ -11,7 +11,7 @@ For more information about the Cofide Connect Workload Identity platform, take a
 This repository uses the [Buf CLI](https://buf.build/docs/ecosystem/cli-overview) to generate Go stubs from protobuf definitions.
 The following tools must be available in order to generate code stubs.
 
-- [Go 1.25.11 toolchain](https://golang.org/doc/install)
+- [Go 1.26.8 toolchain](https://golang.org/doc/install)
 - [protoc-gen-go](https://pkg.go.dev/google.golang.org/protobuf/cmd/protoc-gen-go): `go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.36.5`
 - [Buf CLI](https://buf.build/docs/installation)
 - [Just](https://github.com/casey/just)
