@@ -1,6 +1,6 @@
 module github.com/cofide/cofidectl-sdk
 
-go 1.25.12
+go 1.26.8
 
 // NOTE: Take care to avoid forcing unnecessary upgrades on consumers when
 // updating dependencies.
