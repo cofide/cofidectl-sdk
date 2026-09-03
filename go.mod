@@ -7,7 +7,7 @@ go 1.26.8
 require (
 	github.com/spiffe/spire-api-sdk v1.12.4
 	google.golang.org/genproto/googleapis/api v0.0.0-20260414002931-afd174a4e478
-	google.golang.org/grpc v1.82.1
+	google.golang.org/grpc v1.82.2
 	google.golang.org/protobuf v1.36.12
 )
 
